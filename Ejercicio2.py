@@ -1,0 +1,2 @@
+class libreria():
+    papel= "ipp"
