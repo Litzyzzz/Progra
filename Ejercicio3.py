@@ -1,3 +1,4 @@
+#Clase principal
 class concesionario():
     marca=""
     color=""
@@ -10,16 +11,18 @@ class concesionario():
     precioV=0
     precioC=0
     estado="No registrado"
-
+    
+    #Constructor 
     def __init__(self):
         self.__capacidad="5 personas"
         self.__tipo="4 ruedas"
-
+        
+     #funcion que actualiza el estado del registro   
     def RegistrarCarro(self):
         self.estado="Registrado"
         return self.estado
     
-    #almacena lo del input
+    #almacena lo del input en sus variables
     def DatosCarro(self, MarcaCarro, ColorCarro,
                    NumVin, Year, NombreModelo, 
                      CondicionCarro, PrecioCom):
@@ -31,7 +34,7 @@ class concesionario():
         self.condicion=CondicionCarro
         self.precioV=PrecioCom*1.4
         
-    
+    #funciones individuales que devuelven algo (precio, capacidad y tipo)
     def PrecioCom(self):
         return self.precioC
     def capacidad(self):
@@ -39,8 +42,7 @@ class concesionario():
     def tipo(self):
         return self.__tipo
     
-    #funcion que lee los datos
-    
+    #funcion que recibe las caracteristicas del carro
     print("----------------------------------------------------")
     def RecibeDatosCarros(self):
         MarcaCarro=input("Marca del Carro:")
@@ -57,7 +59,8 @@ class concesionario():
         
         print("----------------------------------------------------")
         print("---------------Global Motors INC--------------------")
-
+        
+        #funcion que imprime los datos capturados
     def MuestraDatosCarro(self):
         print("Marca:",self.marca)
         print("Color:", self.color)
@@ -71,10 +74,12 @@ class concesionario():
         print("Estado:", self.estado)
         print("---------------------------------------------------")
         print("--------------------2024©--------------------------")
-
+#objeto
 Carro1=concesionario()
 print("Información del Carro")
+#Metodo para capturar los datos puestos en la funcion y presentarla
 Carro1.RecibeDatosCarros()
+#Metodo que muestra los datos del objeto 
 Carro1.MuestraDatosCarro()
 
         
