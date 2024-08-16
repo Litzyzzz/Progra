@@ -4,8 +4,8 @@ class concesionario():
     vin=""
     año=""
     modelo=""
-    __capacidad="5 personas"
-    __tipo= "4 ruedas"
+    __capacidad=""
+    __tipo= ""
     condicion=""
     precioV=0
     precioC=0
