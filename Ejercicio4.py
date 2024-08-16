@@ -27,7 +27,7 @@ class dispositivos():
             self.Capacidad=input("Almacenamiento: ")
             self.Ram=input("RAM: ")
             self.Año=input("Año de lanzamiento: ")
-            self.__PrecioCom=float(input("Precio Compra: "))
+            self.__PrecioCom=float(input("Precio Compra:$ "))
         elif self.DispositivoElectronico=="tablet":
             self.DispositivoElectronico="Tablet"
             self.Modelo=input("Modelo de la Tablet: ")
@@ -36,7 +36,7 @@ class dispositivos():
             self.Capacidad=input("Almacenamiento: ")
             self.Ram=input("RAM: ")
             self.Año=input("Año de lanzamiento: ")
-            self.__PrecioCom=float(input("Precio Compra: "))
+            self.__PrecioCom=float(input("Precio Compra:$ "))
 
         elif self.DispositivoElectronico=="portatil":
             self.DispositivoElectronico="Portatil"
@@ -46,9 +46,10 @@ class dispositivos():
             self.Capacidad=input("Almacenamiento: ")
             self.Ram=input("RAM: ")
             self.Año=input("Año de lanzamiento: ")
-            self.__PrecioCom=float(input("Precio Compra: "))
+            self.__PrecioCom=float(input("Precio Compra:$ "))
         else:
             print("Dispositivo no disponible")
+            return
           
 
      #funcion en donde se hace la operacion matematica del Precio Venta
@@ -69,9 +70,9 @@ class dispositivos():
             print("Almacenamiento: ", self.Capacidad)
             print("Memoria RAM: ", self.Ram)
             print("Año: ", self.Año)
-            print("Precio Compra: ", self.__PrecioCom)
+            print("Precio Compra:$ ", self.__PrecioCom)
             self.PVenta()
-            print("Precio Venta: ", self.PrecioVent)
+            print("Precio Venta:$ ", self.PrecioVent)
             print("-----------------------2024©---------------------------")
 #Objeto que nos permite representar el dispositivo a registrar
 Dispositivo1=dispositivos()
