@@ -16,8 +16,8 @@ class concesionario():
         self.__tipo="4 ruedas"
 
     def RegistrarCarro(self):
-        estado="Registrado"
-        return estado
+        self.estado="Registrado"
+        return self.estado
     
     #almacena lo del input
     def DatosCarro(self, MarcaCarro, ColorCarro,
@@ -29,7 +29,7 @@ class concesionario():
         self.año=Year
         self.modelo=NombreModelo
         self.condicion=CondicionCarro
-        self.precioV=PrecioCom*1.14
+        self.precioV=PrecioCom*1.4
         
     
     def PrecioCom(self):
@@ -40,7 +40,8 @@ class concesionario():
         return self.__tipo
     
     #funcion que lee los datos
- 
+    
+    print("----------------------------------------------------")
     def RecibeDatosCarros(self):
         MarcaCarro=input("Marca del Carro:")
         ColorCarro=input("Color del Carro:")
@@ -48,12 +49,14 @@ class concesionario():
         Year=input("Año del Carro:")
         NombreModelo=input("Modelo Carro:")
         CondicionCarro=input("Condición del Carro? (Nuevo/Usado):")
-        PrecioCom=input("Precio Compra:")
-        self.DatosCarro(self, MarcaCarro, ColorCarro,
+        PrecioCom=float(input("Precio Compra:$"))
+        self.DatosCarro(MarcaCarro, ColorCarro,
                    NumVin, Year, NombreModelo, 
                      CondicionCarro, PrecioCom)
+        self.RegistrarCarro()
         
-        print("---------------------------------------------------")
+        print("----------------------------------------------------")
+        print("---------------Global Motors INC--------------------")
 
     def MuestraDatosCarro(self):
         print("Marca:",self.marca)
@@ -64,9 +67,11 @@ class concesionario():
         print("Capacidad:",self.__capacidad)
         print("Tipo Automovil:",self.__tipo)
         print("Condición:", self.condicion)
-        print("Precio Venta:",float(self.precioV))
+        print("Precio Venta:$",round(self.precioV))
         print("Estado:", self.estado)
         print("---------------------------------------------------")
+        print("--------------------2024©--------------------------")
+
 Carro1=concesionario()
 print("Información del Carro")
 Carro1.RecibeDatosCarros()
