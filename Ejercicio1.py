@@ -1,3 +1,4 @@
+#Clase principal
 class veterinaria():
     nombre=""
     edad= 0
@@ -7,11 +8,11 @@ class veterinaria():
     tamaño=""
     esterilización=""
     estado="NO ATENDIDO"
-#hika
+    #funcion para actualizar el estado del registro
     def RegistroPerro(self):
         self.estado= "ATENDIDO"
         return self.estado
-    
+    #funcion que almacena los datos en las variables
     def DatosPerro(self, nombreP,edadP, sexoP,
                    razaP,pesoP,estP):
         self.nombre=nombreP
@@ -24,7 +25,7 @@ class veterinaria():
             self.tamaño= "Perro Pequeño"
         else:
             self.tamaño= "Perro Grande"
-    
+    #funcion que captura lo que ingresa el usuario
     def RecibeDatosPerro(self):
 
         print("****************************************")
@@ -38,7 +39,8 @@ class veterinaria():
         print("****************************************")
         self.DatosPerro(nombreP,edadP,sexoP,razaP,pesoP,estP)
         self.RegistroPerro()
-
+        
+        #funcion que contiene los datos registrados para presentar
     def MuestraDatosPerro(self):
         print("Nombre=",self.nombre)
         print(f"Edad={self.edad} años")
